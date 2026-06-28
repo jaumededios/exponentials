@@ -20,8 +20,8 @@ weekly counts and precomputed fit coefficients for every math subcategory.
 
 ## GitHub Pages deployment
 
-The static site is deployed from the `site/` directory by GitHub Actions. The
-published path is `/exponentials/`:
+The static site is deployed from `site/exponentials/` by GitHub Actions. The
+published project Pages path is `/exponentials/`:
 
 - GitHub project Pages: `https://<owner>.github.io/<repo>/exponentials/`
 - Custom domain, if configured in the repository Pages settings:
@@ -46,10 +46,10 @@ week. Recent complete weeks are re-fetched to absorb arXiv API lag. Fits use
 The GitHub Action in `.github/workflows/refresh-arxiv-plots.yml` runs on push,
 manually, and every Tuesday UTC. On GitHub it rebuilds the JSON, using the
 committed JSON as the seed if the full metadata snapshot is not present, commits
-the refreshed JSON back to the repository, then uploads `site/` and deploys it
-to GitHub Pages. The site/action path serves JSON and renders in the browser
-with Plotly; it does not generate matplotlib PNGs. In the repository settings,
-set Pages to deploy from GitHub Actions.
+the refreshed JSON back to the repository, then uploads `site/exponentials/` and
+deploys it to GitHub Pages. The site/action path serves JSON and renders in the
+browser with Plotly; it does not generate matplotlib PNGs. In the repository
+settings, set Pages to deploy from GitHub Actions.
 
 ## Static site
 
