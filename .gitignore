@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+/data/
+/plots/
+analyze_arxiv_math_pages.py
+fit_math_co_two_exponentials.py
+fit_sequential_two_exponentials.py
+scripts/refresh_weekly_plots.py

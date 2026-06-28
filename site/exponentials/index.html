@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jaume.dedios.cat/exponentials</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead">
+        <div>
+          <p class="kicker">jaume.dedios.cat/exponentials</p>
+          <h1>Weekly arXiv math exponentials</h1>
+        </div>
+        <div class="controls" aria-label="Chart controls">
+          <label for="fieldSelect">Field</label>
+          <select id="fieldSelect"></select>
+        </div>
+      </header>
+
+      <section class="summary" aria-live="polite">
+        <div>
+          <span class="metric-label">latest complete week</span>
+          <strong id="latestWeek">-</strong>
+        </div>
+        <div>
+          <span class="metric-label">papers</span>
+          <strong id="latestCount">-</strong>
+        </div>
+        <div>
+          <span class="metric-label">slow doubling</span>
+          <strong id="slowDouble">-</strong>
+        </div>
+        <div>
+          <span class="metric-label">residual doubling</span>
+          <strong id="fastDouble">-</strong>
+        </div>
+      </section>
+
+      <section class="chart-frame">
+        <div id="chart" role="img" aria-label="Weekly arXiv papers with sequential exponential fit"></div>
+      </section>
+
+      <footer class="note">
+        <span id="fitNote">Sequential robust weighted fit: orange is the first slow exponential; black adds an exponential fit to the residual.</span>
+        <span id="updatedAt"></span>
+      </footer>
+    </main>
+
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
